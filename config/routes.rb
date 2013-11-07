@@ -1,4 +1,5 @@
 SaberJuridico::Application.routes.draw do
+  devise_for :professors
   resources :volumes
   
   # The priority is based upon order of creation: first created -> highest priority.

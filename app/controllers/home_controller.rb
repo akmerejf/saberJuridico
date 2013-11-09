@@ -5,4 +5,9 @@ class HomeController < ApplicationController
   def index
   	
   end
+
+  def instrucao
+
+  end
+  
 end

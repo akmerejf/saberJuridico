@@ -28,9 +28,11 @@ class VolumesController < ApplicationController
     @volume = Volume.new(volume_params)
 
     respond_to do |format|
+
       if @volume.save
         format.html { redirect_to @volume, notice: 'Volume was successfully created.' }
         format.json { render action: 'show', status: :created, location: @volume }
+        format.js
       else
         format.html { render action: 'new' }
         format.json { render json: @volume.errors, status: :unprocessable_entity }
@@ -72,4 +74,8 @@ class VolumesController < ApplicationController
     def volume_params
       params.require(:volume).permit(:titulo, :autor)
     end
+
+    def instrucao
+
+  end
 end

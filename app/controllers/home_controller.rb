@@ -6,8 +6,6 @@ class HomeController < ApplicationController
   	
   end
 
-  def instrucao
-
-  end
+  
   
 end

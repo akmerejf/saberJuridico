@@ -1,8 +1,12 @@
 SaberJuridico::Application.routes.draw do
-  devise_for :professors
+  resources :artigos
+
+  devise_for :admins
+  devise_for :users
   resources :volumes
-  resource :conselhos
- 
+  resources :instrucoes
+  resources :conselhos
+  resources :comissoes
   
   
   # The priority is based upon order of creation: first created -> highest priority.

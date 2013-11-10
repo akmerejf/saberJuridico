@@ -1,0 +1,31 @@
+<%= form_for @artigo, :html => { :class => 'form-horizontal',:multipart => true } do |f| %>
+  <% if @artigo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artigo.errors.count, "error") %> prohibited this artigo from being saved:</h2>
+
+      <ul>
+      <% @artigo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :autor %><br>
+    <%= f.text_field :autor %>
+  </div>
+
+  <div class="field">
+    <%= f.label "PDF" %>
+    <%= f.file_field :pdf %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

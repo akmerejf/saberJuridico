@@ -18,22 +18,34 @@
 
 <body>
 
-
+<% if current_admin.present? %>
+ <div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+          <a class="brand" href=http://localhost:3000/>Revista Saber</a>     
+          <ul class="nav pull-right"> 
+            <%= link_to "Editar", edit_admin_registration_path, :class => 'btn btn-default btn-small' %>
+            <%= link_to "Logout", destroy_admin_session_path, method: 'delete', :class => 'btn btn-danger btn-small' %>  
+          </ul>
+            <ul class="nav">
+              <li><%= link_to 'Inserir Artigo', new_artigo_path %></li>
+              <li><%= link_to 'Exibir Artigos', artigo_path(@artigo) %></li>
+            </ul>
+         <% end %>
+        </div>
+        </div>
+        </div>
 <div id="Geral">
-
-
 <div id="logocesupa"><a href="http://www.cesupa.br/" target="_blank"><%=image_tag("logotipo_cesupa_saber.jpg")=%></a></div>
 <div id="corpo">
 <div id="controla_conteudo">
-
-
 <div id="menu">
 <li><%= link_to "Apresentação", root_path =%></li>
-<li>Conselho Editorial</li>
-<li>Comissão Editorial</li>
-<li>Volumes</li>
-<li>Instruções</li>
-<li><%= link_to "Envio de artigos", volumes_path =%></li>
+<li><%= link_to "Conselho Editorial", conselhos_path %></li>
+<li><%= link_to "Comissão Editorial", comissoes_path %></li>
+<li><%= link_to "Volumes", volumes_path %></li>
+<li><%= link_to "Instruções", instrucoes_path %></li>
+<li><%= link_to "Envio de artigos", artigos_path =%></li>
 <li>Busca</li>
 </div><!-- fecha menu -->
 

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @artigo.titulo %>
+</p>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @artigo.autor %>
+</p>
+
+<% if @artigo.pdf? %>
+  <%= link_to @artigo.pdf.url %>
+  <br />
+  <%= link_to "Tamanho real", @artigo.pdf.url %>
+<% end %>
+
+<%= link_to 'Edit', edit_artigo_path(@artigo) %> |
+<%= link_to 'Back', artigos_path %>

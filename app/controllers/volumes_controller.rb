@@ -1,6 +1,8 @@
 class VolumesController < ApplicationController
-  before_action :set_volume, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_admin!
+  
 
+  before_action :set_volume, only: [:show, :edit, :update, :destroy]
   # GET /volumes
   # GET /volumes.json
   def index
@@ -25,6 +27,7 @@ class VolumesController < ApplicationController
   # POST /volumes
   # POST /volumes.json
   def create
+
     @volume = Volume.new(volume_params)
 
     respond_to do |format|
@@ -72,7 +75,7 @@ class VolumesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def volume_params
-      params.require(:volume).permit(:titulo, :autor)
+      params.require(:volume).permit(:titulo, :autor, :image)
     end
 
     def instrucao

@@ -1,5 +1,4 @@
 class ArtigosController < ApplicationController
-  before_filter :authenticate_admin!
   before_action :set_artigo, only: [:show, :edit, :update, :destroy]
 
   # GET /artigos

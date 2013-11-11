@@ -14,3 +14,10 @@
  *= require_self
  *= require_tree .
  */
+
+ 
+// change colors
+//$link-color: white;
+$navbar-default-bg: #141213;
+// import original bootstrap
+@import "twitter/bootstrap";

@@ -78,7 +78,4 @@ class VolumesController < ApplicationController
       params.require(:volume).permit(:titulo, :autor, :image)
     end
 
-    def instrucao
-
-  end
 end

@@ -34,7 +34,7 @@ gem 'therubyracer'
 
 gem 'less-rails'
 
-gem "twitter-bootstrap-rails"
+gem 'anjlab-bootstrap-rails', '~> 3.0.2.0', :require => 'bootstrap-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

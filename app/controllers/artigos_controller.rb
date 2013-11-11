@@ -4,7 +4,15 @@ class ArtigosController < ApplicationController
   # GET /artigos
   # GET /artigos.json
   def index
-    @artigos = Artigo.all
+    if current_admin.present?
+      @artigos = Artigo.all
+      else
+        @artigo = Artigo.new  
+        respond_to do |format|
+        format.html { render action: 'new' }
+      end
+    end
+    
   end
 
   # GET /artigos/1
@@ -19,6 +27,7 @@ class ArtigosController < ApplicationController
 
   # GET /artigos/1/edit
   def edit
+   
   end
 
   # POST /artigos
@@ -27,12 +36,24 @@ class ArtigosController < ApplicationController
     @artigo = Artigo.new(artigo_params)
 
     respond_to do |format|
-      if @artigo.save
-        format.html { redirect_to @artigo, notice: 'Artigo was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @artigo }
+
+      if current_admin.present?
+        if @artigo.save
+          format.html { redirect_to @artigo, notice: 'Artigo submetido para análise.' }
+          format.json { render action: 'new', status: :ok, location: @artigo }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @artigo.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render action: 'new' }
-        format.json { render json: @artigo.errors, status: :unprocessable_entity }
+         if @artigo.save
+          
+          format.html { redirect_to @artigo, notice: 'Artigo enviado com sucesso.' }
+          
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @artigo.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -40,6 +61,7 @@ class ArtigosController < ApplicationController
   # PATCH/PUT /artigos/1
   # PATCH/PUT /artigos/1.json
   def update
+    if current_admin.present?
     respond_to do |format|
       if @artigo.update(artigo_params)
         format.html { redirect_to @artigo, notice: 'Artigo was successfully updated.' }
@@ -50,15 +72,18 @@ class ArtigosController < ApplicationController
       end
     end
   end
+  end
 
   # DELETE /artigos/1
   # DELETE /artigos/1.json
   def destroy
+    if current_admin.present?
     @artigo.destroy
     respond_to do |format|
       format.html { redirect_to artigos_url }
       format.json { head :no_content }
     end
+  end
   end
 
   private

@@ -1,0 +1,30 @@
+<h1>Listing artigos</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Autor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artigos.each do |artigo| %>
+      <tr>
+        <td><%= artigo.titulo %></td>
+        <td><%= artigo.autor %></td>
+        <td><%= link_to 'Show', artigo %></td>
+        <td><%= link_to 'Edit', edit_artigo_path(artigo) %></td>
+        <td><%= link_to 'Destroy', artigo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Artigo', new_artigo_path %>
+
+

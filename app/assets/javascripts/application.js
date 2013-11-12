@@ -9,10 +9,12 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+// Include all twitter's javascripts
+//= require twitter/bootstrap
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
+//= require jquery.remotipart
+//= require jquery-fileupload
 //= require turbolinks
 //= require_tree .
 // JavaScript Document

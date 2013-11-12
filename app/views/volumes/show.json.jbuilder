@@ -1,1 +1,1 @@
-json.extract! @volume, :titulo, :autor, :created_at, :updated_at
+json.extract! @volume, :titulo, :autor, :image, :created_at, :updated_at

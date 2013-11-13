@@ -5,14 +5,14 @@ en:
   helpers:
     actions: "Actions"
     links:
-      back: "Back"
-      cancel: "Cancel"
+      back: "Voltar"
+      cancel: "Cancelar"
       confirm: "Are you sure?"
       destroy: "Delete"
-      new: "New"
-      edit: "Edit"
+      new: "Novo"
+      edit: "Alterar"
     titles:
-      edit: "Edit %{model}"
-      save: "Save %{model}"
-      new: "New %{model}"
-      delete: "Delete %{model}"
+      edit: "Alterar %{model}"
+      save: "Salvar %{model}"
+      new: "Novo %{model}"
+      delete: "Deletar %{model}"

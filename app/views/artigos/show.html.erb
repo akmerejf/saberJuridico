@@ -1,5 +1,5 @@
 <h2><p id="notice"><%= notice %></p></h2>
-<% if current_admin.present? %>
+
 <p>
   <strong>Titulo:</strong>
   <%= @artigo.titulo %>
@@ -10,12 +10,15 @@
   <%= @artigo.autor %>
 </p>
 
-<% if @artigo.pdf? %>
-  <%= link_to @artigo.pdf.url %>
-  <br />
-  <%= link_to "Exibir", @artigo.pdf.url %>
-<% end %>
 
-<%= link_to 'Edit', edit_artigo_path(@artigo) %> |
-<%= link_to 'Back', artigos_path %>
-<% end %>
+	<% if @artigo.pdf? %>
+		<li class="active">   
+	  	<%= link_to "Exibir", @artigo.pdf.url ,target: '_blank'%>
+	    </li>
+	<% end %>
+	
+	<% if @admin.present? %>
+		<%= link_to 'Alterar', edit_artigo_path(@artigo) %> |
+	<% end %>
+
+<%= link_to 'Voltar', artigos_path %>

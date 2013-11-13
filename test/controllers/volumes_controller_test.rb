@@ -18,7 +18,7 @@ class VolumesControllerTest < ActionController::TestCase
 
   test "should create volume" do
     assert_difference('Volume.count') do
-      post :create, volume: { autor: @volume.autor, titulo: @volume.titulo }
+      post :create, volume: { edicao: @volume.edicao }
     end
 
     assert_redirected_to volume_path(assigns(:volume))
@@ -35,7 +35,7 @@ class VolumesControllerTest < ActionController::TestCase
   end
 
   test "should update volume" do
-    patch :update, id: @volume, volume: { autor: @volume.autor, titulo: @volume.titulo }
+    patch :update, id: @volume, volume: { edicao: @volume.edicao }
     assert_redirected_to volume_path(assigns(:volume))
   end
 

@@ -1,7 +1,5 @@
 class Volume < ActiveRecord::Base
-	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" },
-	 :default_url => "/images/:style/missing.png"
-	 validates_attachment_content_type :image,
-      :content_type => [ 'application/jpg' ],
-      :message => "Apenas arquivos PDF suportados."
+	has_many :articles
+	accepts_nested_attributes_for :articles, allow_destroy: true 
+	validates_presence_of :edicao
 end

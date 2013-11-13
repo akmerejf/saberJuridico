@@ -1,0 +1,7 @@
+<fieldset>
+	<%= f.input :titulo, placeholder: "Título" %>
+	<%= f.input :autor, placeholder: "Autor" %>
+	<%= f.input :pdf, hint: "Apenas arquivos pdf." %>
+	<%= f.hidden_field :_destroy %>
+	<%= link_to "Remover artigo", '#', class: "remove_articles" %>
+</fieldset>

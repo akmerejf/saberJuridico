@@ -1,16 +1,12 @@
 SaberJuridico::Application.routes.draw do
   resources :volumes
-
   resources :artigos
   devise_for :admins
   resources :instrucoes
   resources :conselhos
   resources :comissoes
-  
-  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
   # You can have the root of your site routed with "root"
    root 'home#index'
 

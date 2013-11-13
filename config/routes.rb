@@ -1,8 +1,8 @@
 SaberJuridico::Application.routes.draw do
-  resources :artigos
-
-  devise_for :admins
   resources :volumes
+
+  resources :artigos
+  devise_for :admins
   resources :instrucoes
   resources :conselhos
   resources :comissoes

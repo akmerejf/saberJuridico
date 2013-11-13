@@ -1,4 +1,4 @@
 json.array!(@volumes) do |volume|
-  json.extract! volume, :titulo, :autor, :image
+  json.extract! volume, :edicao
   json.url volume_url(volume, format: :json)
 end

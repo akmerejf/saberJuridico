@@ -1,8 +1,7 @@
 class VolumesController < ApplicationController
-  before_filter :authenticate_admin!
-  
-
+  before_filter :authenticate_admin!, except: [:index, :show]
   before_action :set_volume, only: [:show, :edit, :update, :destroy]
+
   # GET /volumes
   # GET /volumes.json
   def index
@@ -11,7 +10,6 @@ class VolumesController < ApplicationController
 
   # GET /volumes/1
   # GET /volumes/1.json
- 
   def show
   end
 
@@ -27,15 +25,12 @@ class VolumesController < ApplicationController
   # POST /volumes
   # POST /volumes.json
   def create
-
     @volume = Volume.new(volume_params)
 
     respond_to do |format|
-
       if @volume.save
         format.html { redirect_to @volume, notice: 'Volume was successfully created.' }
         format.json { render action: 'show', status: :created, location: @volume }
-        format.js
       else
         format.html { render action: 'new' }
         format.json { render json: @volume.errors, status: :unprocessable_entity }
@@ -75,7 +70,6 @@ class VolumesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def volume_params
-      params.require(:volume).permit(:titulo, :autor, :image)
+      params.require(:volume).permit(:edicao, :article_attributes)
     end
-
 end

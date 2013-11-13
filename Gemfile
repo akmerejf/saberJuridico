@@ -55,3 +55,4 @@ end
 gem 'devise'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "jquery-fileupload-rails"
+gem 'simple_form'

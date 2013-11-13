@@ -1,25 +1,27 @@
-<%= form_for @volume, :html => { :class => 'form-horizontal',:multipart => true } do |f| %>
-  <div class="control-group">
-    <%= f.label :titulo, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :titulo, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :autor, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :autor, :class => 'text_field' %>
-    </div>
-  </div>
+<%= simple_form_for @volume, :html => { :class => 'form-horizontal',:multipart => true } do |f| %>
+  <% if @volume.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@volume.errors.count, "error") %> prohibited this volume from being saved:</h2>
 
- <div class="field">
-    <%= f.label "Imagem" %>
-    <%= f.file_field :image %>
-  </div>
+      <ul>
+      <% @volume.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-  <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                volumes_path, :class => 'btn' %>
+  <div class="field">
+    <%= f.input :edicao %>
+    </div>
+  <%= f.fields_for :articles do |builder| %>
+ 
+    <%render 'artigo_articles', f: builder %>
+    
+    <% end %>
+
+    <%= link_to_add_articles "Adicionar artigo", f, :articles %>
+  <div class="actions">
+   <%= f.button :submit %>
   </div>
 <% end %>

@@ -6,7 +6,7 @@
    <br />
         Edição <%= volume.edicao %>
    <br />
-        <% if @admin.present? %>
+        <% if current_admin.present? %>
         <%= link_to 'Show', volume %>
         <%= link_to 'Edit', edit_volume_path(volume) %>
         <%= link_to 'Destroy', volume, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -14,7 +14,7 @@
     </div>
     <% end %>
 
-<%= link_to 'New Volume', new_volume_path %>
+<%= link_to 'Novo Volume', new_volume_path %>
 
 
 

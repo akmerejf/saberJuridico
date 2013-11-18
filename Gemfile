@@ -53,11 +53,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'devise'
-<<<<<<< HEAD
-gem "paperclip"
 gem "jquery-fileupload-rails"
-=======
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "jquery-fileupload-rails"
 gem 'simple_form'
->>>>>>> 5ef4f6d9838225651c3ec582313538e614961e2e

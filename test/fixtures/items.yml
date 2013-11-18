@@ -3,9 +3,9 @@
 one:
   titulo: MyString
   autor: MyString
-  volumes_id: 
+  volume_id: 
 
 two:
   titulo: MyString
   autor: MyString
-  volumes_id: 
+  volume_id: 

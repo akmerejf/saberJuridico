@@ -1,7 +1,4 @@
 <%= simple_form_for @artigo, :html => { :class => 'form-horizontal',:multipart => true } do |f| %>
-<%= f.input :titulo %>
-  <%= f.input :autor %>
- <%= f.input :pdf, hint: "Apenas arquivos pdf." %>
-  <%= f.button :submit %>
+<% render "formtest", f: f %>
  <% end %>
   

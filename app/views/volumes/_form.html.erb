@@ -14,13 +14,14 @@
   <div class="field">
     <%= f.input :edicao %>
     </div>
-  <%= f.fields_for :articles do |builder| %>
+
+  <%= f.simple_fields_for :items do |f| %>
  
-    <%render 'artigo_articles', f: builder %>
+    <%render 'novo_item', f: f %>
     
     <% end %>
 
-    <%= link_to_add_articles "Adicionar artigo", f, :articles %>
+    <%= link_to_add_item "Adicionar artigo", f, :items %>
   <div class="actions">
    <%= f.button :submit %>
   </div>

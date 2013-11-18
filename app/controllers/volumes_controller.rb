@@ -15,12 +15,12 @@ class VolumesController < ApplicationController
 
   # GET /volumes/new
   def new
-    @volume = Volume.new
+    @volume = Volume.new()
   end
 
   # GET /volumes/1/edit
   def edit
-    
+  @volume = Volume.find(params[:id])
   end
 
   # POST /volumes
@@ -71,6 +71,7 @@ class VolumesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def volume_params
-      params.require(:volume).permit(:edicao, items_attributes: [:id, :titulo, :autor, :pdf])
+      params.require(:volume).permit(:edicao, items_attributes: [:id, :titulo, :autor, :pdf, :_destroy ])
     end
 end
+  

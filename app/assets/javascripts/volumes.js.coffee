@@ -10,5 +10,5 @@
   $(document).on 'click', 'form .add_item', (event) ->
     time = new Date().getTime()
     regexp = new RegExp($(this).data('id'), 'g')
-    $(this).before($(this).data('item').replace(regexp, time))
+    $(this).before($(this).data('items').replace(regexp, time))
     event.preventDefault()

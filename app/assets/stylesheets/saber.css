@@ -64,7 +64,7 @@
 #rodape {
 	width: 800px;
 	height: 107px;
-	background: url(img/rodape.jpg) no-repeat;
+	background: url(rodape.jpg) no-repeat;
 	float: left;
 	color: #fff;
 	text-align:center;
@@ -92,7 +92,7 @@
 }
 
 .fundotopo {
-	background:url(img/tabela_topo.gif) no-repeat;
+	background:url(tabela_topo.gif) no-repeat;
 	width:608px;
 	height:31px;
 	color:#FFFFFF;
@@ -116,7 +116,7 @@
 
 .lateraltabela {
 	float:left;
-	background:url(img/tabela_lateral_2.gif) repeat-y;
+	background:url(tabela_lateral_2.gif) repeat-y;
 	width:608px;
 }
 

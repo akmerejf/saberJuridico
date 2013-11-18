@@ -13,9 +13,9 @@
 //= require bootstrap
 
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.remotipart
-//= require jquery-fileupload
 //= require turbolinks
 //= require_tree .
 // JavaScript Document

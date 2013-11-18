@@ -15,9 +15,9 @@
     <%= f.input :edicao %>
     </div>
 
-  <%= f.simple_fields_for :items do |f| %>
+  <%= f.fields_for :items do |builder| %>
  
-    <%render 'novo_item', f: f %>
+    <%=render 'novo_artigo', f: builder %>
     
     <% end %>
 

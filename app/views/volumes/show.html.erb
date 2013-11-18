@@ -2,19 +2,41 @@
 
 <div id="edicoes" style="margin-bottom: 200px">
     <div style="float:left">
-    <%= link_to image_tag("edicao1.gif"), root_path %>
+    	<%= link_to image_tag("edicao1.gif"), root_path %>
     <br />
-    <p>
-  <strong>Edição </strong>
-  <%= @volume.edicao %>
-</p>
-
-<% if current_admin.present? %>
-<%= link_to 'Alterar', edit_volume_path(@volume) %> |
-<% end %>
-
-<%= link_to 'Voltar', volumes_path %>
-
+    <p><strong>Edição </strong><%= @volume.edicao %></p>
     </div>
+</div>
+  
+  <h3>Edição <%= @volume.edicao %></h3>
+  <h2>Sumário</h2>
 
-
+	<div class="fundotopo"  style="margin-top: 30px;">
+		<div class="titulo1">Editorial</div>
+		<div class="titulo2">Arquivo</div>
+	</div>
+	<div class="lateraltabela">
+		<% for item in @volume.items %>
+			<%= show_for item do |a| %>
+			<div class="linha">
+				<div class="titulo1">
+ 					<ul>Título: 
+  						<li><%= a.attribute :titulo %></li>
+  					</ul>
+  					<ul>Autor(es):
+  						<li><%= a.attribute :autor %></li>
+  					</ul>
+  						</div>
+  						<div class="titulo2"><%=link_to image_tag("edicao1.gif"), item.pdf.url ,target: '_blank' %>
+  						</div>
+  					</div>
+ 				<% end %>
+			<% end %>
+		<div class="rodapetabela">
+			<%= image_tag("tabela_rodape.gif") %>
+		</div>
+	</div>
+	<% if current_admin.present? %>
+		<%= link_to 'Alterar', edit_volume_path(@volume) %> |
+	<% end %>
+	<%= link_to 'Voltar', volumes_path %>

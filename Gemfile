@@ -25,8 +25,8 @@ gem 'jquery-rails'
 gem 'remotipart', '~> 1.2'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'jquery-turbolinks'
 gem 'turbolinks'
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -57,3 +57,4 @@ gem "jquery-fileupload-rails"
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "jquery-fileupload-rails"
 gem 'simple_form'
+gem 'show_for'

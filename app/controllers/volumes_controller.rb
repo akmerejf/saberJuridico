@@ -20,7 +20,6 @@ class VolumesController < ApplicationController
 
   # GET /volumes/1/edit
   def edit
-  @volume = Volume.find(params[:id])
   end
 
   # POST /volumes

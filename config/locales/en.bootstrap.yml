@@ -7,8 +7,8 @@ en:
     links:
       back: "Voltar"
       cancel: "Cancelar"
-      confirm: "Are you sure?"
-      destroy: "Delete"
+      confirm: "Você tem certeza?"
+      destroy: "Excluir"
       new: "Novo"
       edit: "Alterar"
     titles:

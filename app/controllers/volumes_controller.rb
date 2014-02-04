@@ -29,7 +29,9 @@ class VolumesController < ApplicationController
 
     respond_to do |format|
       if @volume.save
-        format.html { redirect_to @volume, notice: 'Volume was successfully created.' }
+       
+
+        format.html { redirect_to @volume, notice: 'Volume criado com sucesso.' }
         format.json { render action: 'show', status: :created, location: @volume }
       else
         format.html { render action: 'new' }
@@ -43,7 +45,7 @@ class VolumesController < ApplicationController
   def update
     respond_to do |format|
       if @volume.update(volume_params)
-        format.html { redirect_to @volume, notice: 'Volume was successfully updated.' }
+        format.html { redirect_to @volume, notice: 'Volume atualizado.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

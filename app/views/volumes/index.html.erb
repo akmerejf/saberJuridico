@@ -1,6 +1,6 @@
-  <h3>Volumes</h3>
+ <h3>Volumes</h3>
 <% @volumes.each do |volume| %>
-      <div id="edicoes" style="margin-bottom: 200x">
+    <div id="edicoes" style="margin-bottom: 200x">
      <div style="float:left; margin-left:15px">
     <%= link_to image_tag("edicao1.gif"), volume %>
    <br />
@@ -11,10 +11,13 @@
         <%= link_to 'Edit', edit_volume_path(volume) %>
         <%= link_to 'Destroy', volume, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
+     </div>
     </div>
     <% end %>
+   <% if current_admin.present? %>
+    <%= link_to 'Novo volume', new_volume_path %> 
+   <% end %>
 
-<%= link_to 'Novo Volume', new_volume_path %>
 
 
 

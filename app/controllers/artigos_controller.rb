@@ -1,24 +1,15 @@
 class ArtigosController < ApplicationController
- before_filter :authenticate_admin!, except: [:index, :new, :show, :create]
+ before_filter :authenticate_admin!, except: [ :new, :show, :create]
 
-  before_action :set_artigo, only: [:show, :edit, :update, :destroy]
+  before_action :set_artigo, only: [ :show, :update, :destroy]
 
   # GET /artigos
   # GET /artigos.json
-  def index
-    if current_admin.present?
-      @artigos = Artigo.all
-      else
-        @artigo = Artigo.new  
-        respond_to do |format|
-        format.html { render action: 'new' }
-      end
-    end
-    
-  end
+ 
 
   # GET /artigos/1
   # GET /artigos/1.json
+  
   def show
   end
 
@@ -28,9 +19,7 @@ class ArtigosController < ApplicationController
   end
 
   # GET /artigos/1/edit
-  def edit
-   
-  end
+ 
 
   # POST /artigos
   # POST /artigos.json
@@ -41,7 +30,7 @@ class ArtigosController < ApplicationController
 
       
         if @artigo.save
-          format.html { redirect_to @artigo, notice: 'Artigo enviado com sucesso.' }
+          format.html { redirect_to @artigo,  notice: "Artigo enviado com sucesso." }
           format.json { render action: 'new', status: :ok, location: @artigo }
         else
           format.html { render action: 'new' }

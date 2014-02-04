@@ -2,42 +2,43 @@
 /* CSS Document */
 
 #Geral {
-	width: 800px;
+	position: relative;
+	width: 60%;
 	margin: 0 auto;
 }
 #logocesupa {
-	width: 800px;
+	width: 80%;
 	float: left;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 10%;
+	margin-bottom: 5%;
 }
 #corpo {
-	width: 800px;
+	width: 100%;
 	float: left;
-	height: 313px;
+	height: 30%;
 	background: url(saber.jpg) no-repeat;
 }
 #menu {
-	width: 116px;
+	width: 15%;
 	height: 172px;
 	background: #9f3c00;
 	float: left;
-	margin-left: 45px;
-	_margin-left: 23px;
-	margin-top: 126px;
+	margin-left: 4.5%;
+	margin-left: 5.5%;
+	margin-top: 15.9%;
 	list-style-position:outside;
 }
 #menu li a {
 	color: #fff;
-	width: 116px;
+	width: 15%;
 	font-family: "Trebuchet MS";
-	font-size: 12px;
+	font-size: 0.9em;
 }
 #menu li {
 	list-style: none;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 6px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 6%;
 }
 #menu li:hover {
 	background: #d95000;
@@ -45,12 +46,12 @@
 }
 
 #conteudo {
-	width: 600px;
+	width: 60%;
 	float: left;
-	margin-left: 26px;
+	margin-left: 3%;
 	font-family: "Trebuchet MS";
-	font-size: 14px;
-	*margin-top:20px;
+	font-size: 0.9em;
+	margin-top:1%;
 }
 #conteudo h1 {
 	color: #333;
@@ -62,22 +63,17 @@
 	padding-top: 190px;
 }
 #rodape {
-	width: 800px;
-	height: 107px;
-	background: url(rodape.jpg) no-repeat;
+	width: 120%;
+	height: 8em;
+	background: url(rodape2.jpg) no-repeat;
 	float: left;
 	color: #fff;
 	text-align:center;
 }
 
-.rodape_revista{ padding-top:60px; padding-left:158px;}
+.rodape_revista{ padding-top:6%; vertical-align: center;}
 
-#rodape2 {
-	width: 798px;
-	height: 60px;
-	color: #000;
-	float: left;
-}
+
 .textorodape {
 	font-family: "Trebuchet MS";
 	font-size: 12px;
@@ -93,8 +89,8 @@
 
 .fundotopo {
 	background:url(tabela_topo.gif) no-repeat;
-	width:608px;
-	height:31px;
+	width:125%;
+	height:2em;
 	color:#FFFFFF;
 	font-family:"Trebuchet MS";
 	margin-bottom:0px;
@@ -117,8 +113,9 @@
 .lateraltabela {
 	float:left;
 	background:url(tabela_lateral_2.gif) repeat-y;
-	width:608px;
+	width:125%;
 }
+
 
 
 .rodapetabela {
@@ -139,14 +136,14 @@ li{
 }
 
 .titulo2 a img{
-	float:left;
-	margin-top:30px;
-	margin-left:20px;
+	float:right;
+	margin-top:40%;
+	margin-left:100%;
 }
 
 .linha:hover{
 	float:left;
-	width:599px;
+	width:100%;
 	background:#9F3C00;
 	color:#FFFFFF;
 }

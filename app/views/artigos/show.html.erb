@@ -13,12 +13,9 @@
 
 	<% if @artigo.pdf? %>
 		<li class="active">   
-	  	<%= link_to "Exibir", @artigo.pdf.url ,target: '_blank'%>
+	  	<%= link_to "Exibir artigo", @artigo.pdf.url ,target: '_blank'%>
 	    </li>
 	<% end %>
-	
-	<% if @admin.present? %>
-		<%= link_to 'Alterar', edit_artigo_path(@artigo) %> |
-	<% end %>
 
-<%= link_to 'Voltar', artigos_path %>
+<br>
+<%= link_to 'Voltar', new_artigo_path %>

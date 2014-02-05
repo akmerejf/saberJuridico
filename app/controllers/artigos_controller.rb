@@ -30,6 +30,7 @@ class ArtigosController < ApplicationController
 
       
         if @artigo.save
+          ArtigoMailer.test_confirmation(@artigo).deliver
           format.html { redirect_to @artigo,  notice: "Artigo enviado com sucesso." }
           format.json { render action: 'new', status: :ok, location: @artigo }
         else

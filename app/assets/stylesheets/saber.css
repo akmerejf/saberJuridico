@@ -20,10 +20,9 @@
 }
 #menu {
 	width: 15%;
-	height: 172px;
+	height: 10%;
 	background: #9f3c00;
 	float: left;
-	margin-left: 4.5%;
 	margin-left: 5.5%;
 	margin-top: 15.9%;
 	list-style-position:outside;
@@ -40,10 +39,7 @@
 	padding-bottom: 2%;
 	padding-left: 6%;
 }
-#menu li:hover {
-	background: #d95000;
-	width: 110px;
-}
+
 
 #conteudo {
 	width: 60%;
@@ -58,9 +54,9 @@
 	font-weight: 100;
 }
 #controla_conteudo {
-	width: 800px;
+	width: 102%;
 	float: left;
-	padding-top: 190px;
+	padding-top: 24.1%;
 }
 #rodape {
 	width: 120%;

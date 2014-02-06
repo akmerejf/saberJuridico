@@ -2,20 +2,22 @@
 <% @volumes.each do |volume| %>
     <div id="edicoes" style="margin-bottom: 200x">
      <div style="float:left; margin-left:15px">
+       <br />
     <%= link_to image_tag("edicao1.gif"), volume %>
    <br />
+    <br />
         Edição <%= volume.edicao %>
    <br />
         <% if current_admin.present? %>
-        <%= link_to 'Show', volume %>
-        <%= link_to 'Edit', edit_volume_path(volume) %>
-        <%= link_to 'Destroy', volume, method: :delete, data: { confirm: 'Are you sure?' } %>
+       <%= link_to 'Show', volume, :class => "btn-xs btn-success" , role: "button"%>
+       <%= link_to 'Edit', edit_volume_path(volume), :class => "btn-xs btn-primary", role: "button" %>
+        <%= link_to 'Destroy', volume, method: :delete, data: { confirm: 'Are you sure?'}, :class => "btn-xs btn-danger" , role: "button"%>
         <% end %>
      </div>
     </div>
     <% end %>
    <% if current_admin.present? %>
-    <%= link_to 'Novo volume', new_volume_path %> 
+    <div class="novo_volume"><%= button_to 'Novo volume', new_volume_path, :class => "btn btn-primary btn-sm active", :method => :get %></div> 
    <% end %>
 
 

@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 require "bundler/capistrano"  # Essas duas primeiras linhas são importacoes para o projeto
 require "rvm/capistrano"
 server "107.170.24.19", :web, :app, :db , primary: true
 
 set :application, "saberJuridico" # Nome da app
 set :user, "akmere" # usuario do SERVIDOR, nome de usuario do servidor...
-set :deploy_to, "/home/#{user}/apps/#{application}" #Local no servidor onde vai ficar o projeto
+set :deploy_to, "/home/apps/#{application}" #Local no servidor onde vai ficar o projeto
 set :use_sudo, false # Não executar os Comandos com 'sudo' no inicio
 
 set :scm, "git" # Tipo: git, bitcucket...

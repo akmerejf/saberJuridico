@@ -29,8 +29,6 @@ class VolumesController < ApplicationController
 
     respond_to do |format|
       if @volume.save
-       
-
         format.html { redirect_to @volume, notice: 'Volume criado com sucesso.' }
         format.json { render action: 'show', status: :created, location: @volume }
       else
@@ -48,8 +46,9 @@ class VolumesController < ApplicationController
         format.html { redirect_to @volume, notice: 'Volume atualizado.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render :edit }
         format.json { render json: @volume.errors, status: :unprocessable_entity }
+        
       end
     end
   end
@@ -63,6 +62,8 @@ class VolumesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

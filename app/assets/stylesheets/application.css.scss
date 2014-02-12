@@ -63,6 +63,36 @@ $navbar-default-bg: #141213;
   font-style: italic;
 }
 .novo_volume{
-  margin-left: 90%;
-  margin-top: 50%;
+  margin-left: 25%;
+  margin-top: 40%;
+}
+.demo ui-sortable{
+  max-width:100%;
+  height:auto;
+  display:block;
+  position: relative;
+  width: 60%;
+
+  margin: 0 auto;
+}
+.nav-pills{
+position:relative;
+    margin-top: 4px;
+    margin-left: 45px;
+    width: 116px;
+    max-width: 50%;
+    height: auto;
+    background-color: #9f3c00;;
+}
+.view{
+position:relative;
+  margin-top: -420px;
+  margin-left: 220px;
+  max-width:100%;
+  width: 600px;
+
+}
+.lyrow{
+position: relative;
+  max-width: 100%;
 }

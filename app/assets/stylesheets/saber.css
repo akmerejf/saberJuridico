@@ -2,23 +2,36 @@
 /* CSS Document */
 
 #Geral {
+    
+	max-width:100%;
+	height:auto;
+    display:block;
 	position: relative;
 	width: 60%;
 	margin: 0 auto;
 }
 #logocesupa {
-	width: 80%;
+	max-width:100%;
+	height:auto;
+    display:block;
+	width: 50%;
 	float: left;
 	margin-top: 10%;
 	margin-bottom: 5%;
 }
 #corpo {
+	max-width:100%;
+	height:auto;
+    display:block;
 	width: 100%;
 	float: left;
 	height: 30%;
-	background: url(saber.jpg) no-repeat;
+	
 }
 #menu {
+	height:auto;
+    display:block;
+	max-width:100%;
 	width: 15%;
 	height: 10%;
 	background: #9f3c00;
@@ -59,23 +72,24 @@
 	padding-top: 24.1%;
 }
 #rodape {
-	width: 120%;
-	height: 8em;
+	max-width: 100%;
+	width: 1000px;
+	height: 100px;
 	background: url(rodape2.jpg) no-repeat;
 	float: left;
 	color: #fff;
 	text-align:center;
 }
 
-.rodape_revista{ padding-top:6%; vertical-align: center;}
+.rodape_revista{ padding-top:60px; vertical-align:center; padding-left: 175px;}
 
 
 .textorodape {
+	max-width: 100%;
 	font-family: "Trebuchet MS";
 	font-size: 12px;
 	color: #666;
-	margin-top: 20px;
-	text-align:center;
+	
 }
 
 #tabela{
@@ -85,8 +99,8 @@
 
 .fundotopo {
 	background:url(tabela_topo.gif) no-repeat;
-	width:125%;
-	height:2em;
+	width: 608px;
+	height:30px;
 	color:#FFFFFF;
 	font-family:"Trebuchet MS";
 	margin-bottom:0px;
@@ -107,17 +121,18 @@
 
 
 .lateraltabela {
+	position: relative;
+
 	float:left;
 	background:url(tabela_lateral_2.gif) repeat-y;
-	width:125%;
+	width:600px;
 }
 
 
 
 .rodapetabela {
+	max-width: 100%;
 	float:left;
-	width:608px;
-	height:39px;
 	color:#FFFFFF;
 	font-family:"Trebuchet MS";
 }
@@ -132,6 +147,7 @@ li{
 }
 
 .titulo2 a img{
+	 max-width:100%;
 	float:right;
 	margin-top:40%;
 	margin-left:100%;
@@ -145,3 +161,9 @@ li{
 }
 
 a{text-decoration:none;}
+
+.erb-image-wrapper img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}

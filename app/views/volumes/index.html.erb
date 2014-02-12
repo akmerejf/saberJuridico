@@ -1,5 +1,11 @@
  <h3>Volumes</h3>
 <% @volumes.each do |volume| %>
+
+<% if Volume.count(:all)%4==0 %>
+        <br />
+        <br />
+<% end %>
+
     <div id="edicoes" style="margin-bottom: 200x">
      <div style="float:left; margin-left:15px">
        <br />
@@ -11,7 +17,7 @@
         <% if current_admin.present? %>
        <%= link_to 'Show', volume, :class => "btn-xs btn-success" , role: "button"%>
        <%= link_to 'Edit', edit_volume_path(volume), :class => "btn-xs btn-primary", role: "button" %>
-        <%= link_to 'Destroy', volume, method: :delete, data: { confirm: 'Are you sure?'}, :class => "btn-xs btn-danger" , role: "button"%>
+        <%= link_to 'Destroy', volume, method: :delete, data: { confirm: 'Você tem certeza?'}, :class => "btn-xs btn-danger" , role: "button"%>
         <% end %>
      </div>
     </div>

@@ -18,6 +18,9 @@
 	<div class="lateraltabela">
 		<% for item in @volume.items %>
 			<%= show_for item do |a| %>
+			<% if item%4==0 %>
+				<br />
+			<% end %>
 			<div class="linha">
 				<div class="titulo1">
  					<ul>Título: 
@@ -30,7 +33,9 @@
   						<div class="titulo2"><%=link_to image_tag("pdf.gif"), item.pdf.url ,target: '_blank' %>
   						</div>
   					</div>
+ 				
  				<% end %>
+
 			<% end %>
 		<div class="rodapetabela">
 			<%= image_tag("tabela_rodape.gif") %>

@@ -62,10 +62,7 @@ $navbar-default-bg: #141213;
   display: block;
   font-style: italic;
 }
-.novo_volume{
-  margin-left: 25%;
-  margin-top: 40%;
-}
+
 .demo ui-sortable{
   max-width:100%;
   height:auto;
@@ -77,10 +74,11 @@ $navbar-default-bg: #141213;
 }
 .nav-pills{
 position:relative;
+
     margin-top: 4px;
     margin-left: 45px;
     width: 116px;
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     background-color: #9f3c00;;
 }

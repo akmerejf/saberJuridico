@@ -77,6 +77,7 @@ class VolumesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def volume_params
+      
       params.require(:volume).permit(:edicao, items_attributes: [:id, :titulo, :autor, :pdf, :_destroy ])
     end
 end

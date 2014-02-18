@@ -27,15 +27,7 @@
           padding-top: 50px;">
 
           <a href="http://www.cesupa.br/" class="img-responsive" alt="Responsive image" target="_blank" ><img alt="Icon" src="/assets/logotipo_cesupa_saber.jpg" /></a>
-          <% if !current_admin.present? %>
-          <div class="btn-group btn-group-justified" align="right">
-            <button type="button"><%= link_to "Login", admin_session_path %></button>
-          </div>
-          <% else %>
-          <div class="btn-group btn-group-justified" align="right">
-            <button type="button"><%= link_to "Sair", destroy_admin_session_path %></button>
-          </div>
-          <% end %>
+          
           <div class="row">
             <div class="col-md-12">
               <div class="erb-image-wrapper" contenteditable="true">
@@ -52,14 +44,23 @@
     <div  class="row">
       <div class="row clearfix">
         <div class="col-md-2 column" style="margin-left: 18px;margin-top: -26px;">
-          <ul class="nav nav-pills nav-collapse">
+          <ul class="nav nav-pills" >
             <li class="disabled"><%= link_to "Apresentação", root_path =%></li>
             <li class="disabled"><%= link_to "Conselho Editorial", conselhos_path %></li>
             <li class="disabled"><%= link_to "Comissão Editorial", comissoes_path %></li>
             <li class="disabled"><%= link_to "Volumes", volumes_path %></li>
             <li class="disabled"><%= link_to "Instruções", instrucoes_path %></li>
             <li class="disabled"><%= link_to "Envio de artigos", new_artigo_path =%></li>
+            <% if !current_admin.present? %>
+         
+           <li class="disabled"><%= link_to "Área Administrativa", admin_session_path %></li>
+         
+          <% else %>
+           <li class="disabled"><%= link_to "Logout", destroy_admin_session_path,:method => :delete  %></li>
+         
+          <% end %>
           </ul>
+          
         </div>
 
         <div id="conteudo" class="col-md-4 column" style="margin-top: -10px;">

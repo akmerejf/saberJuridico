@@ -3,7 +3,8 @@ class ArtigoMailer < ActionMailer::Base
   
   def test_confirmation(artigo)
     @artigo = artigo
-    
-    mail(:to => "akmere <akmerejf@gmail.com>", :subject => "Registered")
+    attachments["artigo.pdf"] = File.read(artigo.pdf.path)
+    mail(:to => "akmere <akmerejf@gmail.com>", :subject => "Novo Artigo adicionado")
+
   end
 end

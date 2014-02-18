@@ -4,7 +4,7 @@
 
   $(document).on 'click', 'form .remove_item', (event) ->
     $(this).prev('input[type=hidden]').val('0')
-    $(this).closest('fieldset').slideToggle()
+    $(this).parent('fieldset').remove()
     event.preventDefault()
     
    

@@ -43,8 +43,8 @@
     </div>
     <div  class="row">
       <div class="row clearfix">
-        <div class="col-md-2 column" style="margin-left: 18px;margin-top: -26px;">
-          <ul class="nav nav-pills" >
+        <div class="col-md-3 column" style="margin-left: 18px;margin-top: -26px;">
+          <ul class="nav nav-pills" style="width:115.5px;">
             <li class="disabled"><%= link_to "Apresentação", root_path =%></li>
             <li class="disabled"><%= link_to "Conselho Editorial", conselhos_path %></li>
             <li class="disabled"><%= link_to "Comissão Editorial", comissoes_path %></li>
@@ -53,7 +53,7 @@
             <li class="disabled"><%= link_to "Envio de artigos", new_artigo_path =%></li>
             <% if !current_admin.present? %>
          
-           <li class="disabled"><%= link_to "Área Administrativa", admin_session_path %></li>
+           <li class="disabled" ><%= link_to "Área Administrativa", admin_session_path %></li>
          
           <% else %>
            <li class="disabled"><%= link_to "Logout", destroy_admin_session_path,:method => :delete  %></li>

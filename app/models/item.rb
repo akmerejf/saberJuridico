@@ -5,6 +5,5 @@ class Item < ActiveRecord::Base
 	 validates_attachment_content_type :pdf,
       :content_type => [ 'application/pdf' ],
       :message => "Apenas arquivos pdf suportados."
-      validates_presence_of :titulo, :autor, :pdf
-
+      validates_presence_of :titulo, :autor, :pdf	
 end

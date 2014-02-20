@@ -62,10 +62,6 @@ class VolumesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  def item_destroy
-    @item.destroy
-  end
-
 
   
 

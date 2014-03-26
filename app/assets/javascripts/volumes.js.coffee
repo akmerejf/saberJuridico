@@ -8,11 +8,6 @@
     $(this).closest('fieldset').slideToggle()
     event.preventDefault()
 
-  $(document).on 'click', 'form .update_item', (event) ->
-    $(this).prev('input[type=hidden]').val('1') 
-    $(this).parent('fieldset').slideToggle()
-    event.preventDefault()
-    
 
   $(document).on 'click', 'form .add_item', (event) ->
     time = new Date().getTime()

@@ -23,6 +23,7 @@ test:
   timeout: 5000
 
 production:
+
  adapter: mysql2
  encoding: utf8
  database: saber_production
@@ -30,3 +31,4 @@ production:
  username: root
  password: root
  socket: /var/run/mysqld/mysqld.sock
+

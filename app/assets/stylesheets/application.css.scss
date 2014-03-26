@@ -79,7 +79,7 @@ $navbar-default-bg: #141213;
     width: 105px;
     max-width: 100%;
     height: auto;
-    background-color: #9f3c00;;
+    background-color: #9f3c00;
 }
 .view{
 position:relative;
@@ -93,3 +93,34 @@ position:relative;
 position: relative;
   max-width: 100%;
 }
+
+.efeito a:hover {
+
+  display: block;
+  text-decoration: none;
+  color: #9f3c00;
+  border-radius: 0;
+  background:#ff6600 !IMPORTANT;
+
+} 
+.efeito a:link{
+    text-decoration: none;
+  color: #9f3c00; 
+  }
+
+  .efeito a:focus{
+    text-decoration: none;
+  color: #9f3c00; 
+  }
+
+  .efeito a:visited{
+  text-decoration: none;
+  color: white;
+
+  }
+
+  .efeito a:active{
+    text-decoration: none;
+  color: #9f3c00; 
+  }
+  
